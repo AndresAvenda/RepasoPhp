@@ -14,8 +14,14 @@ if ($conn->connect_error) {
 }
 echo "Conexión exitosa<br>";
 
-// Consulta para insertar un nuevo registro
-$sql = "INSERT INTO miembro (nombre, id) VALUES ('Juan Perez', 123)";
+//toma de variables del formulario
+$name = $_POST['name'];
+$edad = $_POST['edad'];
+$email = $_POST['email'];
+$contrase = $_POST['contrase'];
+
+//consulta
+$sql = "INSERT INTO miembro (Nombre, edad, email, contrase) VALUES ('$name', '$edad', '$email', '$contrase')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Nuevo registro creado exitosamente";

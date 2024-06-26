@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <br>
     <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h1>Tarjeta</h1>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li>Hola</li>
-                    <li>Hola</li>
-                    <li>Hola</li>
-                    <li>Hola</li>
-                </ul>
-            </div>
+        <div class="card-header">
+            <h1>Formulario</h1>
         </div>
-
-        <div id="contenedorBoton">
-            <label for="boton"></label>
-            <button class="btn btn-primary" id="boton">POP</button>
+        <div class="card-body">
+            <form action="enlace.php" method="post">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control"  name="name" placeholder="Julian Perez" required></input>
+                <br>
+                <label for="edad">Edad</label>
+                <input type="text" class="form-control"  name="edad" placeholder="27" required></input>
+                <br>
+                <label for="email">Correo</label>
+                <input type="email" class="form-control"  name="email" placeholder="Ejemplo@gmail.com" required></input>
+                <br>
+                <label for="contrase">Contraseña</label>
+                <input type="password" class="form-control"  name="contrase" placeholder="Ejemplo_123" required></input>
+                <br>
+                <button id="boton">Enviar</button>
+            </form>
         </div>
-
+        
     </div>
 </body>
 </html>
