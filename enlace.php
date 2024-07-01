@@ -1,5 +1,5 @@
 <?php
-    // Parámetros de conexión
+// Parámetros de conexión
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -23,6 +23,7 @@ $contrase = $_POST['contrase'];
 //consulta
 $sql = "INSERT INTO miembro (Nombre, edad, email, contrase) VALUES ('$name', '$edad', '$email', '$contrase')";
 
+//Mostrar los datos que hay en la base de datos en una tabla 
 if ($conn->query($sql) === TRUE) {
     echo "Nuevo registro creado exitosamente";
 } else {
